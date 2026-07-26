@@ -5,7 +5,7 @@ export default function Analytics() {
   const location = useLocation();
 
   useEffect(() => {
-    window.gtag("config", "G-XXXXXXXXXX", {
+    window.gtag("config", "G-95NDSDGHGW", {
       page_path: location.pathname,
     });
   }, [location]);
