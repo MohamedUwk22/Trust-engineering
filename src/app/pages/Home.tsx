@@ -63,7 +63,12 @@ export function Home() {
       position: "Director, Urban Development"
     }
   ];
-
+const handleAnalyticsClick = () => {
+  window.gtag("event", "start_project_click", {
+    button_name: "signup",
+    page_name: "home",
+  });
+};
   return (
     <div>
       {/* Hero Section */}
@@ -94,6 +99,7 @@ export function Home() {
             </Link>
             <Link
               to="/contact"
+              onClick={handleAnalyticsClick}
               className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300"
             >
               Start a Project
